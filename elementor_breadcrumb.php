@@ -18,6 +18,13 @@ add_action('wp_enqueue_scripts', 'enqueue_style');
 use Elementor\Plugin;
 
 add_action('init', static function () {
+    if (! did_action('elementor/loaded')) {
+        return false;
+    }
     require_once(__DIR__ . '/widget/Breadcrumb.php');
-    \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \Elementor_Widget_Breadcrumb());
+    if (version_compare(ELEMENTOR_VERSION, "3.5.0", '>')) {
+        \Elementor\Plugin::instance()->widgets_manager->register(new \Elementor_Widget_Breadcrumb());
+    } else {
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new \Elementor_Widget_Breadcrumb());
+    }
 });

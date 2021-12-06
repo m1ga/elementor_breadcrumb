@@ -5,11 +5,11 @@ Simple breadcrumb component for Elementor.
 
 ## Requirements
 
-* [Elementor](https://elementor.com/?ref=26724)
+* [Elementor](https://trk.elementor.com/26724)
 
 ## Install
 
-* Install [Elementor](https://elementor.com/?ref=26724)
+* Install [Elementor](https://trk.elementor.com/26724)
 * Download and install this plugin (https://github.com/m1ga/elementor_breadcrumb/releases)
 
 
